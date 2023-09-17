@@ -78,12 +78,13 @@ Uma árvore binária padrão representa uma estrutura de dados não linear organ
 
 Dentro de uma árvore de busca binária, segue-se a regra de que o valor de um nó à esquerda é menor que o valor do nó pai, enquanto o valor de um nó à direita é maior que o valor do nó pai. Essa regra é aplicada recursivamente às subárvores à esquerda e à direita da raiz.
 
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/2f215d21-5342-479f-b574-739b0be86b1b" width="500px" height="auto" alt=".">
-    <figcaption>GIF criado utilizando o simulador disponível em: https://www.cs.usfca.edu/~galles/visualization/BST.html</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/2f215d21-5342-479f-b574-739b0be86b1b" width="500px" height="auto" alt="gif">
+</p>
+
+<p align="center">
+  GIF criado utilizando o simulador disponível em: https://www.cs.usfca.edu/~galles/visualization/BST.html
+</p>
 
 
 <br>No GIF acima, podemos observar que o nó raiz é 15, e todos os nós da subárvore esquerda são menores que o nó raiz, e todos os nós da subárvore direita são maiores que o nó raiz. É possível observar também que o lado esquerdo da árvore obteve uma altura 5, enquanto o lado direito obteve uma altura 2, o que mostra que a árvore está desequilibrada.
