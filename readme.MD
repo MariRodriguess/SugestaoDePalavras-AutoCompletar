@@ -105,12 +105,13 @@ Nesse código, o processo de codificação de Huffman se inicia com a construç�
 
 O GIF abaixo ilustra o processo de construção de uma árvore de codificação de Huffman para as palavras: "entre", "modo", "mundo", "sujeito" e "teoria", junto com suas respectivas frequências no arquivo "txt1.txt" disponível na pasta "data" (frequências: 127, 129, 134, 145 e 176).
 
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/bc91d3ed-250e-452e-b637-3b719e03f9cb" width="500px" height="auto" alt=".">
-    <figcaption>Construção de uma árvore de codificação Huffman</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/bc91d3ed-250e-452e-b637-3b719e03f9cb" width="500px" height="auto" alt="gif">
+</p>
+
+<p align="center">
+  Construção de uma árvore de codificação Huffman
+</p>
 
 <br> É evidente que a construção da árvore segue uma lógica de ordenar as palavras de acordo com suas frequências, neste caso, em ordem crescente, e então combinar sempre as duas frequências mais baixas em um único nó, e reorganizar as palavras novamente. Esse processo é repetido até que reste apenas um único nó na árvore. Posteriormente, para atribuir códigos a cada palavra, percorremos a árvore, adicionando "1" quando seguimos para a direita e "0" quando seguimos para a esquerda. Isso resulta em códigos únicos para cada palavra na árvore de Huffman.
 
@@ -142,12 +143,13 @@ O processo de balanceamento de uma árvore binária tem como objetivo a reduçã
 
 No entanto, é importante notar que esses mecanismos de balanceamento, garantem que a altura da árvore seja mantida em um limite logarítmico em relação ao número de elementos "n". No GIF abaixo, é possível perceber que os elementos são os mesmos inseridos na ávore Binária Padrão anteriormente, e enquanto na AVL a diferença de altura do lado esquerdo para o lado direito foi apenas 1, na AVL foi 3.
 
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/df3263b3-ff35-404f-a5d7-49cdf7b727d0" width="500px" height="auto" alt=".">
-    <figcaption>GIF criado utilizando o simulador disponível em: https://www.cs.usfca.edu/~galles/visualization/AVLtree.html</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/df3263b3-ff35-404f-a5d7-49cdf7b727d0" width="500px" height="auto" alt="gif">
+</p>
+
+<p align="center">
+  GIF criado utilizando o simulador disponível em: https://www.cs.usfca.edu/~galles/visualization/AVLtree.html
+</p>
 
 <br> Portanto, independentemente da sequência de operações realizadas, a árvore AVL continua a fornecer um desempenho eficiente e previsível para operações de busca, inserção e remoção, com a complexidade limitada a O(log n). 
 
@@ -174,13 +176,13 @@ As funções utilizadas para encontrar as K palavras mais recorrentes do texto f
 
 - ```insertBasicTree(TreeBasic t, RecordBasic r):``` Essa função insere um novo registro r em uma árvore binária de busca representada por t. Ela verifica se a árvore está vazia e insere o novo nó na posição adequada para manter a propriedade de árvore de busca binária, levando em consideração o valor do registro r.
 
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/22b60d92-78a4-46ee-97af-77b24b0d33d5" width="500px" height="auto" alt=".">
-    <figcaption>Função insertBasicTree</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/22b60d92-78a4-46ee-97af-77b24b0d33d5" width="500px" height="auto" alt="img">
+</p>
 
+<p align="center">
+  Função insertBasicTree
+</p>
 <br>
 
 - ```preordemBasicTree(TreeBasic t, ofstream &file):``` Essa função realiza uma travessia pré-ordem na árvore binária de busca t e escreve os registros no arquivo de saída file. A travessia pré-ordem visita primeiro o nó raiz, seguido dos nós à esquerda e, por fim, dos nós à direita.
@@ -206,14 +208,15 @@ As funções utilizadas para encontrar as K palavras mais recorrentes do texto f
 
 - ```createHuffmanTree(vector<pair<string, int>> tabFreq):``` Esta função cria uma árvore de Huffman com base em uma tabela de frequência de palavras. Ela constrói a árvore mesclando os nós de acordo com suas frequências, usando uma fila de prioridade. Em seguida, chama a função auxiliar `createHuffmanTreeHelper` para calcular os códigos de Huffman.
 
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/d1ec4ab7-eea4-4656-b317-c11655cfb486" width="500px" height="auto" alt=".">
-    <figcaption>Função createHuffmanTree</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/d1ec4ab7-eea4-4656-b317-c11655cfb486" width="500px" height="auto" alt="img">
+</p>
 
+<p align="center">
+  Função createHuffmanTree
+</p>
 <br>
+
 
 - ```printHuffmanTree(TreeHuffman* t):``` Esta função imprime os nós da árvore de Huffman juntamente com seus códigos de Huffman e frequências. É usada para depuração e visualização da árvore.
 
@@ -239,12 +242,13 @@ As funções utilizadas para encontrar as K palavras mais recorrentes do texto f
 
 - ```insertTreeAvl(TreeAvl** t, RecordAvl r):``` Essa função insere um novo registro `r` em uma árvore AVL representada por `t`. Ela verifica se a árvore está vazia e insere o novo nó na posição adequada para manter a propriedade de árvore de busca binária balanceada, levando em consideração o valor do registro `r`. Além disso, ela realiza rotações simples ou duplas, se necessário, para manter o balanceamento da árvore.
 
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/504e828e-5384-4d82-aa92-9be9ae9f01ec" width="500px" height="auto" alt=".">
-    <figcaption>Função insertTreeAvl</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/504e828e-5384-4d82-aa92-9be9ae9f01ec" width="500px" height="auto" alt="img">
+</p>
+
+<p align="center">
+  Função insertTreeAvl
+</p>
 <br>
 
 - ```pesquisaAvl(TreeAvl** t, TreeAvl** aux, RecordAvl r):``` Essa função busca um registro na árvore AVL. Se o registro for encontrado, o ponteiro `aux` aponta para o nó correspondente; caso contrário, uma mensagem de erro é exibida.
@@ -273,21 +277,25 @@ As funções utilizadas para encontrar as K palavras mais recorrentes do texto f
 ▶ Arquivo output:
 
 <h4><b>Entradas: </b></h4>
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/6cb45f0b-bc5d-42c6-a741-224377e5fe62" width="700px" height="auto" alt=".">
-    <figcaption>Entradas: txt1.txt e txt2.txt, disponíveis na pasta "data" (qtdArq=2), com 7 palavras mais recorrentes (k=7) e 2 palavras-chave de busca</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/6cb45f0b-bc5d-42c6-a741-224377e5fe62" width="700px" height="auto" alt="img">
+</p>
+
+<p align="center">
+  Entradas: txt1.txt e txt2.txt, disponíveis na pasta "data" (qtdArq=2), com 7 palavras mais recorrentes (k=7) e 2 palavras-chave de busca
+</p>
+<br>
+
 
 <h4><b>Saida:</b></h4>
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/3dccdf7a-55af-4dce-af6b-a7c03d82d0fb" width="800px" height="auto" alt=".">
-    <figcaption>Arquivo "output.data" após a execução</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/3dccdf7a-55af-4dce-af6b-a7c03d82d0fb" width="800px" height="auto" alt="img">
+</p>
 
+<p align="center">
+  Arquivo "output.data" após a execução
+</p>
+<br>
 
 ▶ Terminal de comando:
 
@@ -297,12 +305,14 @@ Todos os 6 arquivos de texto disponíveis na pasta "data" (qtdArq=6), com 10 pal
 
 
 <h4><b>Saida:</b></h4>
-<div align="center">
-  <figure>
-    <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/23c60e4d-f9c8-409c-afd4-4ae4dde05e3c" width="450px" height="auto" alt=".">
-    <figcaption>Saída do terminal de comando</figcaption>
-  </figure>
-</div>
+<p align="center">
+  <img src="https://github.com/MariRodriguess/SugestaoDePalavras-AutoCompletar/assets/127866299/23c60e4d-f9c8-409c-afd4-4ae4dde05e3c" width="450px" height="auto" alt="img">
+</p>
+
+<p align="center">
+  Saída do terminal de comando
+</p>
+<br>
 
 
 
