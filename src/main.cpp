@@ -7,8 +7,8 @@
 #include <locale.h>
 #include <chrono>
 
-#define k 5
-#define qtdArq 1
+#define k 15
+#define qtdArq 6
 
 int main() {
 
@@ -64,7 +64,7 @@ int main() {
                 if ((copiaHeap.size()>0) && (glossario.size()>0)){
 
                     //Binária
-                    auto startBinaria = std::chrono::high_resolution_clock::now();
+                    //auto startBinaria = std::chrono::high_resolution_clock::now();
                     TreeBasic* raizBasic = CreateBasicTree();
                     for (const auto& elemento : copiaHeap) {
                         if (!elemento.first.empty()){
@@ -75,19 +75,19 @@ int main() {
                             raizBasic = insertBasicTree(raizBasic, rBasic); 
                         }    
                     }
-                    auto endBinaria = std::chrono::high_resolution_clock::now();
-                    auto durationBinaria = std::chrono::duration_cast<std::chrono::nanoseconds>(endBinaria - startBinaria);
-                    cout << "\nTempo de execucao da arvore Binaria: " << durationBinaria.count() << " ns";
+                    //auto endBinaria = std::chrono::high_resolution_clock::now();
+                    //auto durationBinaria = std::chrono::duration_cast<std::chrono::nanoseconds>(endBinaria - startBinaria);
+                    //cout << "\nTempo de execucao da arvore Binaria: " << durationBinaria.count() << " ns";
 
                     //Huffman
-                    auto startHuffman = std::chrono::high_resolution_clock::now();
+                    //auto startHuffman = std::chrono::high_resolution_clock::now();
                     TreeHuffman* huffmanTree = createHuffmanTree(copiaHeap);
-                    auto endHuffman = std::chrono::high_resolution_clock::now();
-                    auto durationHuffman = std::chrono::duration_cast<std::chrono::nanoseconds>(endHuffman - startHuffman);
-                    cout << "\nTempo de execucao da arvore Huffman: " << durationHuffman.count() << " ns";
+                    //auto endHuffman = std::chrono::high_resolution_clock::now();
+                    //auto durationHuffman = std::chrono::duration_cast<std::chrono::nanoseconds>(endHuffman - startHuffman);
+                    //cout << "\nTempo de execucao da arvore Huffman: " << durationHuffman.count() << " ns";
 
                     //AVL
-                    auto startAvl = std::chrono::high_resolution_clock::now();
+                    //auto startAvl = std::chrono::high_resolution_clock::now();
                     TreeAvl* raizAvl = CreateTreeAvl();
                     for (const auto& elemento : copiaHeap) {
                         if (!elemento.first.empty()){
@@ -99,9 +99,9 @@ int main() {
 
                         }    
                     }
-                    auto endAvl = std::chrono::high_resolution_clock::now();
-                    auto durationAvl = std::chrono::duration_cast<std::chrono::nanoseconds>(endAvl - startAvl);
-                    cout << "\nTempo de execucao da arvore AVL: " << durationAvl.count() << " ns" << endl << endl;
+                    //auto endAvl = std::chrono::high_resolution_clock::now();
+                    //auto durationAvl = std::chrono::duration_cast<std::chrono::nanoseconds>(endAvl - startAvl);
+                    //cout << "\nTempo de execucao da arvore AVL: " << durationAvl.count() << " ns" << endl << endl;
                     
 
                     //Escreve o resultado das arvores no arquivo de output
